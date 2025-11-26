@@ -22,7 +22,9 @@ jobs:
   build_job:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      
+      - name: Checkout code 
+        uses: actions/checkout@v4
       - name: display hello
         run: echo hello 
   deploy_job:
