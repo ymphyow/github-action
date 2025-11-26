@@ -21,7 +21,9 @@ jobs:
             - name: display readme file
               run: cat README.md
     build_job:
-        needs: setup_job
+        needs: 
+          - setup_job
+          - deploy_job
         runs-on: windows-latest
         steps:
             - name: display hello
