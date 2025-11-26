@@ -21,11 +21,13 @@ jobs:
             - name: display readme file
               run: cat README.md
     build_job:
+        needs: setup_job
         runs-on: windows-latest
         steps:
             - name: display hello
               run: echo hello
     deploy_job:
+        needs: setup_job
         runs-on: macos-latest
         steps:
             - run: echo "Hello Mac"
